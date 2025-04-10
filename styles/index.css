@@ -1,0 +1,234 @@
+/* Font Family Inter W/ 100-900 Font Weight */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* Css Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  /* Colors and Backgrounds */
+  --main-background-green: hsl(75, 94%, 57%);
+  --main-white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --default-font-size: 0.875rem;
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+
+  --font-family: "Inter", sans-serif;
+}
+html {
+  background-color: var(--grey-900);
+  color: var(--main-white);
+  font-size: var(--default-font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-400);
+}
+.AppParent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 10vh);
+}
+.card {
+  background-color: var(--grey-800);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+}
+.card-header > img {
+  border-radius: 50%;
+}
+.card-header > .profile__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.card-header > .profile__information > .profile__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.card-header > .profile__information > .profile__group > span:first-of-type {
+  font-size: 2rem;
+  font-weight: var(--font-weight-700);
+}
+.card-header > .profile__information > .profile__group > span:last-of-type {
+  color: var(--main-background-green);
+  font-weight: var(--font-weight-600);
+  font-size: 1.15rem;
+}
+
+/* Card Body */
+/* .card-body{
+
+} */
+.card-body > .social__buttons > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+.card-body > .social__buttons > ul > li {
+  background-color: var(--grey-700);
+  padding: 16px;
+  max-width: 75%;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.875rem;
+  color: var(--main-white);
+  text-decoration: none;
+  font-weight: var(--font-weight-600);
+  font-size: 1.15rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.card-body > .social__buttons > ul > li:hover {
+  cursor: pointer;
+  background-color: var(--main-background-green);
+  color: var(--grey-700);
+}
+
+
+@media screen and (min-width: 600px){
+  .card{
+    max-width: 16%;
+  }
+}
